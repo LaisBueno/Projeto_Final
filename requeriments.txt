@@ -1,4 +1,4 @@
 pandas
 streamlit
-plotly
-missigno
+plotly==6.1.2
+missingno
