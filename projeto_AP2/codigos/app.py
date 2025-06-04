@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import os
 
-df = pd.read_csv('bases_tratadas/dados_tratados.csv', sep=';')
+df = pd.read_csv('bases_tratadas/dados_tratados.csv')
 
 # --- Configuração da Página ---
 st.set_page_config(layout="wide", page_title="Dashboard de Análise de Dados AliExpress")
