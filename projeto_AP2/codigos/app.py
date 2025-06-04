@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 # --- Configuração da Página ---
 st.set_page_config(layout="wide", page_title="Dashboard de Análise de Dados AliExpress")
@@ -25,6 +26,10 @@ if st.sidebar.button("Análises Multivariadas", key="nav_multivariate"):
 st.title('Dashboard de Análise de Dados de Produtos AliExpress')
 
 # --- Carregamento dos Dados (feito uma vez no início) ---
+current_dir = os.path.dirname(__file__)
+csv_file_path = os.path.join(current_dir, '..', 'bases_tratadas', 'dados_tratados.csv')
+df = pd.read_csv(csv_file_path, sep=';')
+
 try:
     df = pd.read_csv('../bases_tratadas/dados_tratados.csv', sep=';')
 except FileNotFoundError:
