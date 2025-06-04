@@ -31,7 +31,7 @@ csv_file_path = os.path.join(current_dir, '..', 'bases_tratadas', 'dados_tratado
 df = pd.read_csv(csv_file_path, sep=';')
 
 try:
-    df = pd.read_csv('../bases_tratadas/dados_tratados.csv', sep=';')
+    df = pd.read_csv('bases_tratadas/dados_tratados.csv', sep=';')
 except FileNotFoundError:
     st.error("Erro: O arquivo 'dados_tratados.csv' não foi encontrado. Por favor, verifique o caminho.")
     st.stop()
